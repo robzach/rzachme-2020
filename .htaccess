@@ -1,0 +1,13 @@
+ErrorDocument 404 http://www.rzach.me/404.html
+
+
+Redirect /bib http://rzach.me/blog/research/theory/2016/09/08/Annotated-bibliography.html
+Redirect /thesis http://rzach.me/thesis.html
+
+
+Options -Indexes
+Options +MultiViews
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

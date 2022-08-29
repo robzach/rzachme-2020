@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    
+    
+    
+    <!-- include style sheet for code highlighting -->
+    <head>
+        <link rel="stylesheet" href="/css/syntax.css">
+        <title>R.Zach{% if page.title %}: {{ page.title }}{% endif %}</title>
+    </head>
+ 
+<!--    if you don't get the encoding right it can't render curly quotes-->
+  <meta charset="utf-8">
+
+    
+<!--    here's the actual styling for the City of Bridges pages-->
+    <style>
+        
+/*        pull in from the edges a bit*/
+        html {
+            padding: 2em;
+            padding: 3vw;
+        }
+        
+        
+        body  {
+            font-size:1.2em;
+/*            font-size: 1.5vw;*/
+            font-family:geneva;
+/*            background-color:lightgray;*/
+/*            color:dodgerblue;*/
+        }
+        
+/*        indent text that isn't headings*/
+        p {
+            margin-left: 1.5em;
+        }
+    </style>
+
+    
+    
+  <body>
+    <main class="page-content" aria-label="Content">
+        <div>
+            <h3 style="margin-top: 0px;color: brown"><a href="/cob.html" style="color: inherit">Physical Computing Class</a> at <a href="https://cityofbridgeshighschool.org/" style="color: inherit">City of Bridges High School</a>, Pittsburgh</h3>
+        </div>
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+  </body>
+</html>

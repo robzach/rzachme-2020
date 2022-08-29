@@ -1,0 +1,2 @@
+# intending to redirect the base URL to the home page…not clear this is working
+Redirect 301 / http://www.rzach.me/home

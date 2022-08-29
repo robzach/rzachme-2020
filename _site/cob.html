@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+    
+    <!-- include style sheet for code highlighting -->
+    <head>
+        <link rel="stylesheet" href="/css/syntax.css">
+        <title>R.Zach: City of Bridges class (spring 2020)</title>
+    </head>
+ 
+<!--    if you don't get the encoding right it can't render curly quotes-->
+  <meta charset="utf-8">
+
+    
+<!--    here's the actual styling for the City of Bridges pages-->
+    <style>
+        
+/*        pull in from the edges a bit*/
+        html {
+            padding: 2em;
+            padding: 3vw;
+        }
+        
+        
+        body  {
+            font-size:1.2em;
+/*            font-size: 1.5vw;*/
+            font-family:geneva;
+/*            background-color:lightgray;*/
+/*            color:dodgerblue;*/
+        }
+        
+/*        indent text that isn't headings*/
+        p {
+            margin-left: 1.5em;
+        }
+    </style>
+
+    
+    
+  <body>
+    <main class="page-content" aria-label="Content">
+        <div>
+            <h3 style="margin-top: 0px;color: brown"><a href="/cob.html" style="color: inherit">Physical Computing Class</a> at <a href="https://cityofbridgeshighschool.org/" style="color: inherit">City of Bridges High School</a>, Pittsburgh</h3>
+        </div>
+      <div class="wrapper">
+        <style>
+    table {
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+        padding: 0.3em;
+        margin-left: 1.5em;
+        text-align: left
+    }
+    img {
+/*        centered*/
+        margin: auto;
+        display: block;
+    }
+     img.medium{
+        width: 40%;
+    }
+    .row {
+        display: flex;
+        }
+    .col{
+        flex: 5%;
+        padding: 5px;
+        }
+    h3 {
+/*        bump progress log dates in*/
+        margin-left:1.5em;
+        }
+    h3 ~ ul {
+/*        bump progress log dates in (these are ul's preceded by h3's)*/
+        margin-left: 3em;
+        }
+    pre.highlight {
+/*        move code blocks in */
+        margin-left: 5em;
+        }
+</style>
+
+<div class="row">
+  <div class="column">
+    <img src="/images/cob.jpg" style="width:100%; margin-top:70%" />
+  </div>
+    <span style="font-size: 15vw;">+</span>
+  <div class="column">
+    <img src="/images/uno.jpg" style="width:100%; margin-top:20%" />
+  </div>
+    <span style="font-size: 15vw;">+</span>
+    <span style="font-size: 15vw;">🧠</span>
+    <span style="font-size: 15vw;">=&thinsp;‼︎</span>
+</div>
+
+<p><center><em style="font-size: 0.75em">Arduino Uno R3 board image from <a href="https://store.arduino.cc/usa/arduino-uno-rev3">arduino.cc</a></em></center></p>
+
+<h2 id="about-this-class">About this class</h2>
+
+<p><a href="https://cityofbridgeshighschool.org/">City of Bridges High School</a> is a “progressive, holistic, 9th–12th grade high school which believes that school should be transformational for the students, the community, and the world.” (I couldn’t put it better than them!) They’re located on the South Side of Pittsburgh, PA.</p>
+
+<p><a href="/">Robert Zacharias</a> (that’s me) is teaching a five-week class there on Physical Computing in the spring of 2020. The class runs on Tuesday and Thursday afternoons, 1–3 p.m. We’re learning how to build interactive electronic devices using the Arduino electronics platform.</p>
+
+<h2 id="our-goals-for-the-block">Our goals for the block</h2>
+
+<ul>
+  <li>Learn some electronics theory and practice.</li>
+  <li>Learn some programming in the <code class="highlighter-rouge">C</code> language.</li>
+  <li>Learn to use the Arduino electronics platform to build simple interactive devices (which combine electronics and computer programming).</li>
+  <li>Use our newly acquired skills to create some data-gathering devices—i.e. experimental apparatus—to be used in scientific inquiry by City of Bridges students.</li>
+</ul>
+
+<h2 id="assignments">Assignments</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>assignment</th>
+      <th>due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/cob/hw-1.html">Homework 1</a></td>
+      <td>Tuesday 2/11 (extended from 2/6)</td>
+    </tr>
+    <tr>
+      <td><a href="/cob/hw-2.html">Homework 2</a></td>
+      <td>Tuesday 2/18</td>
+    </tr>
+    <tr>
+      <td><a href="/cob/hw-3.html">Homework 3</a></td>
+      <td>Thursday 2/20</td>
+    </tr>
+    <tr>
+      <td><a href="/cob/hw-4.html">Homework 4</a></td>
+      <td>Tuesday 2/25</td>
+    </tr>
+    <tr>
+      <td><a href="/cob/hw-5.html">Homework 5</a></td>
+      <td>Thursday 2/27</td>
+    </tr>
+    <tr>
+      <td><a href="/cob/hw-6.html">Homework 6</a></td>
+      <td>Tuesday 3/3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="progress-log">Progress log</h2>
+
+<p><strong>As of this writing (Thursday, March 5th, 2020), this class has concluded. Thanks to the students and staff of City of Bridges High School for sharing in the learning. I’m hoping that this experience will serve as a useful kernel for further explorations in electronics, software, and building interactive devices.</strong></p>
+
+<p>Here’s a log of the learning and activities we did every day in our time together:</p>
+
+<h3 id="class-1-tuesday-february-4th">Class 1: Tuesday, February 4th</h3>
+
+<ul>
+  <li>Getting to know each other: what is everyone’s name, and what’s an example of something you recently built or like to build?</li>
+  <li>Introduction to the teacher and some <a href="https://courses.ideate.cmu.edu/60-223/s2019/work">sample projects his CMU students have made in the past</a></li>
+  <li>Going on a slow and patient tour of the Arduino Uno board and its many different components, including:
+    <ul>
+      <li>capacitors which are mounted on the board</li>
+      <li>direct current (DC) input power barrel jack</li>
+      <li><code class="highlighter-rouge">5V</code> (5 volt) and <code class="highlighter-rouge">GND</code> (ground) pins</li>
+      <li>the Analog Input section, which are pins <code class="highlighter-rouge">A0</code> through <code class="highlighter-rouge">A5</code></li>
+      <li>the 16 MHz (megahertz) crystal oscillator which helps keep the Arduino’s chip coordinated</li>
+      <li>the ATMega 328 chip which is the heart and brains of the Arduino</li>
+      <li>the Digital Input/Output (I/O) section, which are pins <code class="highlighter-rouge">0</code> through <code class="highlighter-rouge">13</code>
+        <ul>
+          <li>note: pins <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">1</code> are reserved for communication, and you shouldn’t plug into them unless you’ve got a pretty good reason</li>
+        </ul>
+      </li>
+      <li>various indicator lights on the board, including the power light, the TX and RX lights, and the light connected to pin <code class="highlighter-rouge">13</code></li>
+      <li>the reset button</li>
+      <li>the USB port</li>
+    </ul>
+  </li>
+  <li>Introduction to algorithms activity
+    <ul>
+      <li>Cut/tear a piece of paper into different-length rectangles</li>
+      <li>Lay these in a random order on the table in front of you</li>
+      <li>Put them in height order.
+        <ul>
+          <li>How did you do that? What were the “rules” you followed?</li>
+        </ul>
+      </li>
+      <li>Sharing out some student-generated suggestions for other rules (i.e. sorting algorithms) to put things into an order</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="class-2-thursday-february-6th">Class 2: Thursday, February 6th</h3>
+
+<ul>
+  <li>Briefly go over <a href="/cob/hw-1.html">Homework 1</a> responses (only two students completed it! Hence the extension to Tuesday 2/11)
+    <ul>
+      <li>One student selects <a href="https://archive.org/details/electricalexperi00bonnuoft/page/19/mode/1up">this beautiful image of magnetic force lines</a> “because it looks like a pair of eyes in the darkness.” We use this as a jumping-off point to talk about magnetic fields broadly; how the Earth itself is a magnet which has changed over time; and how likes repel while opposites attract (one of the many parallel phenomena to those we see in electronics).</li>
+      <li>Another student points to a <a href="https://web.archive.org/web/20190731130205/http://www.cardiopartners.com/blog/the-history-of-defibrillation-defibrillators-and-portable-aeds/">site covering a brief history of automated electrical defibrillators (AEDs)</a>, and we briefly discuss the historical development of these devices from odd experiment to commonplace lifesaver.</li>
+    </ul>
+  </li>
+  <li>The “hydraulic analogy” for electrical flow.
+    <ul>
+      <li>Pressure creates flow. More pressure creates more flow, and vice versa. These two have a “direct relationship.”</li>
+      <li>Resistance fights against flow. At a fixed pressure, more resistance creates <em>less</em> flow, and vice versa. These two have an “inverse relationship.”</li>
+      <li>An experiment: we hand out a long and short piece of straw to some students. The students are asked to blow through each straw separately and describe the difference in sensation.
+        <ul>
+          <li>Students uniformly report that blowing through the longer straw is more difficult, and that less air flows when they blow with a certain force. (This straw is more resistive.)</li>
+          <li>Conversely, blowing through the shorter straw is easier, and that more air flows when blowing with a certain force. (This straw is less resistive.)</li>
+          <li>These findings reinforce experimentally what we’d already decided in theory about the relationship between pressure, resistance, and flow.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Drawing electrical schematics
+    <ul>
+      <li>Use of a common set of shared symbols and drawing conventions leads to clear communication of circuits between engineers.</li>
+      <li>Elements we draw and name:
+        <ul>
+          <li>wire/trace</li>
+          <li>⏧ node (two or more wires joining)</li>
+          <li>crossing without contact</li>
+          <li>diode</li>
+          <li>light-emitting diode (LED)</li>
+          <li><code class="highlighter-rouge">5V</code> power supply</li>
+          <li>⏚ ground</li>
+          <li>simple switch</li>
+          <li>resistor</li>
+        </ul>
+      </li>
+      <li>Exercise: given a <code class="highlighter-rouge">5V</code> supply, a ground, and an LED, draw the proper connecting wires to make it so the switch turns the LED on and off.
+        <ul>
+          <li>Two solutions: <code class="highlighter-rouge">5V</code>—switch—LED—ground, or <code class="highlighter-rouge">5V</code>—LED—switch—ground.</li>
+          <li>In both cases, as we discuss, operating the switch will complete or interrupt the circuit (and therefore can be used to switch the LED)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Practical application: wiring up an LED using the Arduino as a power supply
+    <ul>
+      <li>Learning how a solderless breadboard’s internal wiring is structured</li>
+      <li>No switch this time, but we do use a resistor to prevent too much current from flowing through the LED</li>
+      <li>The circuit is <code class="highlighter-rouge">5V</code>—resistor—LED—ground</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="class-3-tuesday-febuary-11th">Class 3: Tuesday, Febuary 11th</h3>
+
+<ul>
+  <li>Cell phone policy: please don’t use cell phones in class!</li>
+  <li>Timing: if we start class on time, we can take a 5 minute break in the middle.</li>
+  <li>Go over further homework responses</li>
+  <li>Reviewing schematics from last class</li>
+  <li>Circuit activity: using the continuity meter</li>
+  <li>Break</li>
+  <li>Arduino programming (see below for the code we wrote today in class)</li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// make the light attached to pin 13 blink</span>
+
+<span class="cm">/*
+ * the steps to make a light blink:
+ * 
+ * 1. turn the light on
+ * 2. turn the light off
+ * 3. repeat 1 and 2
+ * 
+ */</span>
+
+<span class="c1">// stuff you want to do once and only once</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+  <span class="c1">// set up the correct pin modes</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">// OUTPUT is like a power supply</span>
+<span class="p">}</span>
+
+<span class="c1">// stuff you want to do over and over</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="c1">// turn on the LED</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span> <span class="c1">// "send electricity out of pin 13"</span>
+
+  <span class="c1">// wait for half a second</span>
+  <span class="c1">// delay(XXX) milliseconds (there are 1000 milliseconds per second)</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  
+  <span class="c1">// turn off the LED</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span> <span class="c1">// "don't send electrity out of pin 13"</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-4-thursday-february-13th">Class 4: Thursday, February 13th</h3>
+
+<ul>
+  <li>Flow and resistance
+    <ul>
+      <li>Pressure (or voltage) falls along a resistive path</li>
+      <li>This is true in the case of a pipe carrying a fluid, or a wire carrying electricity</li>
+    </ul>
+  </li>
+  <li>Materials have different electricity-carrying capacity
+    <ul>
+      <li>Insulators conduct electricity poorly (air, stone, wood, brick, glass, etc.)</li>
+      <li>Conductors conduct electricity well (metals)</li>
+      <li>Semiconductors are somewhere in the middle (graphite, silicon, and others)</li>
+    </ul>
+  </li>
+  <li>A potentiometer is a three-legged component
+    <ul>
+      <li>One outside leg connects to a voltage source</li>
+      <li>The other outside leg connects to a different voltage (typicall ground)</li>
+      <li>The middle leg, called the “wiper,” can be connected electrically at any point along that resistive path, so its voltage can be varied by the user from the input voltage on the left, to the input voltage on the right, or anywhere in between</li>
+    </ul>
+  </li>
+  <li>Designing and implementing a circuit to use a potentiometer to dim the brightness of an LED</li>
+  <li>A multimeter is an electrical tool that can measure:
+    <ul>
+      <li>Voltage, and when it’s doing this it’s called a “voltmeter” (we use it in class to measure the voltages present at different points in our circuit)</li>
+      <li>Resistance, and when it’s doing that it’s called an “ohmmeter” (we use it in class to measure the resistance of a wire, our own bodies, and a potentiometer)</li>
+    </ul>
+  </li>
+  <li>The Arduino is a voltmeter; here’s some code to read the voltages it reads on an analog input pin:</li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// read a potentiometer value and send it back to the computer</span>
+
+<span class="cm">/* 
+ *  potentiometer wiper is connected to pin A1
+ *  potentiometer outside legs are connected to 5V and ground
+ */</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="c1">// turn on the Serial communication system</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="c1">// Serial.println(thingInHere) will "print" thingInHere to the computer</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// measure the voltage at pin A1</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-5-tuesday-february-18th">Class 5: Tuesday, February 18th</h3>
+
+<ul>
+  <li>Briefly go over <a href="/cob/hw-2.html">Homework 2</a></li>
+</ul>
+
+<p>Partial example solution:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+
+  <span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Review schematics from homework</li>
+  <li><code class="highlighter-rouge">I = V ÷ R</code> and its implications (using the math to find unknown current, resistance, or voltage)</li>
+  <li><a href="https://docs.google.com/spreadsheets/d/1fP-q289fBu48skAByLbkKEaMM96ovhvZpb0TNbIVVA0/edit?usp=sharing">The Arduino is a voltmeter</a> activity</li>
+  <li>Use the potentiometer to change blinking rate of two LEDs</li>
+  <li>Add on a photoresistor to measure the amount of ambient light, and use that to also vary the blinking rate</li>
+  <li>Brief introduction to block diagrams, for use in <a href="/cob/hw-3.html">Homework 3</a></li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// read a potentiometer's value and send it back to the computer</span>
+<span class="c1">// use the potentiometer's position to change blink rate</span>
+
+<span class="c1">// pot is plugged in to pin A3</span>
+<span class="c1">// LED1 is plugged into pin 3</span>
+<span class="c1">// LED2 is plugged into pin 5</span>
+<span class="c1">// photoresistor is plugged in to pin A1</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> <span class="c1">// turn on serial communication between Arduino and computer</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">A3</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// send analogRead(A3) back to the computer</span>
+  <span class="c1">// turn on one LED and turn off the other</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">A3</span><span class="p">));</span>
+
+  <span class="c1">// switch which LED is on and off</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">A1</span><span class="p">));</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-6-thursday-february-20th">Class 6: Thursday, February 20th</h3>
+
+<ul>
+  <li>Going over answers to Homework 3
+    <ul>
+      <li><code class="highlighter-rouge">I = V/R</code> math/circuit problems</li>
+      <li>Block diagram schematics of various machines or processes</li>
+      <li>Resistors in series add up their equivalent resistances, while resistors in parallel reduce their equivalent resistances</li>
+    </ul>
+  </li>
+  <li>Wiring up a button using a pull-down resistor so that the input is not left floating</li>
+  <li>Using variables in our code (see sample code below)</li>
+  <li>The all-important <code class="highlighter-rouge">if…else</code> structure in programming to test for conditions</li>
+  <li>Homework assigned: <a href="/cob/hw-4.html">Homework 4</a></li>
+</ul>
+
+<p>Code we wrote: turning on an LED when an attached button is pressed
+(Note: I added the lines which make the POTPIN variable)</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// button plugged into pin 2</span>
+<span class="c1">// and LED plugged into pin 6</span>
+
+<span class="c1">// make a new variable to store the pin number</span>
+<span class="kt">int</span> <span class="n">BUTTONPIN</span><span class="p">;</span> <span class="c1">// BUTTONPIN is the name of the variable.</span>
+<span class="n">BUTTONPIN</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// now BUTTONPIN stores the number 2.</span>
+<span class="kt">int</span> <span class="n">LEDPIN</span><span class="p">;</span>
+<span class="n">LEDPIN</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">POTPIN</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span> <span class="c1">// you can also do these both in one line</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTONPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">LEDPIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">POTPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="c1">// when the button is pressed, light the LED</span>
+
+  <span class="kt">int</span> <span class="n">buttonState</span><span class="p">;</span> <span class="c1">// variable to store the button's state</span>
+  <span class="n">buttonState</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTONPIN</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">potVal</span><span class="p">;</span> <span class="c1">// variable to store the potentiometer's value</span>
+  <span class="n">potVal</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">POTPIN</span><span class="p">);</span>
+
+  <span class="c1">// test: are there 5 volts at pin 2?</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">buttonState</span> <span class="o">==</span> <span class="n">HIGH</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// if so, then light pin 6</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LEDPIN</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// if not, turn off the light</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LEDPIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-7-tuesday-february-25th">Class 7: Tuesday, February 25th</h3>
+
+<ul>
+  <li>Reviewing Homework 4
+    <ul>
+      <li>One student did the ideation assignment</li>
+      <li>Students had a hard time with the technical assignment</li>
+      <li>We do the “technical warmup” assigned</li>
+    </ul>
+  </li>
+  <li>Driving a small speaker with the <code class="highlighter-rouge">tone()</code> library</li>
+  <li>Reading an HC-SR04 ultrasonic ranger using the <code class="highlighter-rouge">NewPing</code> library (downloaded via Library Manager)</li>
+  <li>Driving a hobby servomotor</li>
+  <li><a href="/cob/hw-5.html">Homework 5</a> assigned</li>
+</ul>
+
+<p>Code to do the technical warmup homework assignment:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// alternating blinking LEDs, rate based on a pot. position</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">LED1PIN</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">LED2PIN</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">POTPIN</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">LED1PIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">LED2PIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">POTPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">potVal</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">POTPIN</span><span class="p">);</span>
+
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED1PIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED2PIN</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">potVal</span><span class="p">);</span>
+
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED1PIN</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED2PIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">potVal</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Code to drive a hobby servomotor:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// tell a servo motor where to go</span>
+
+<span class="cp">#include &lt;Servo.h&gt;
+</span><span class="k">const</span> <span class="kt">int</span> <span class="n">SERVOPIN</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">Servo</span> <span class="n">turnMotor</span><span class="p">;</span> <span class="c1">// create a servo motor "object"</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">turnMotor</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">SERVOPIN</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">turnMotor</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// go to 5 degrees of rotation</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">turnMotor</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span> <span class="c1">// go to 100 degrees of rotation</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-8-thursday-feb-27th">Class 8: Thursday, Feb. 27th</h3>
+
+<ul>
+  <li>Review Homework 5
+    <ul>
+      <li>Everyone shares out their proposals for scientific apparatus to build out for the final project (part 1 of the homework). Note that many of the ideas weren’t “apparatus” per se, but rather useful daily-life implements. Ideas students presented:
+        <ul>
+          <li>An intercom system to operate between rooms at City of Bridges</li>
+          <li>A system that would acknowledge when people make donations to the community fridge (a fund for purchasing communal food)</li>
+          <li>A speaker that would play a predetermined song (such as the birthday song, etc.)</li>
+          <li>A water temperature sensor</li>
+          <li>A weather station</li>
+          <li>An air quality monitor</li>
+          <li>An alarm clock device, preprogrammed to alarm at particular times of day relevant to the City of Bridges school day (such as between classes)</li>
+          <li>A distance-sensing aid for a blind or visually impaired person (using an ultrasonic ranger to provide tactile distance feedback)</li>
+          <li>A sound machine to play different soothing (i.e. white noise) sounds at different times</li>
+          <li>A rain gauge</li>
+          <li>A multi-input weather station</li>
+        </ul>
+      </li>
+      <li>Student shows off their input–output machine (part 2 of the homework)
+        <ul>
+          <li>A device that illuminates an LED when an ultrasonic ranger detects an object inside of a particular range</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Quick demo of a 16-column, 2-row alphanumeric LCD display (like <a href="https://courses.ideate.cmu.edu/60-223/s2020/tutorials/I2C-lcd">this one</a>)</li>
+  <li>We learn how to use the ADXL335 triple-axis analog accelerometer (<a href="https://courses.ideate.cmu.edu/60-223/s2020/tutorials/ADXL335">tutorial page for reference</a>)</li>
+  <li>Some wrestling with our computers and their Bluetooth keyboards which are annoying to pair with them (this unfortunately consumed ~20 minutes of class)</li>
+  <li>Discussion of our final project plan
+    <ul>
+      <li>Sole apparatus proposal: weather station</li>
+      <li>Daily-life helpful proposals: community fridge donation reward machine; song-playing speaker system; pre-programmed alarm clock</li>
+      <li>After some discussion, it emerged that dividing our energies into multiple projects would probably stretch our efforts too thin</li>
+      <li>In conclusion: <strong>We’re building a weather machine!</strong></li>
+    </ul>
+  </li>
+  <li><a href="/cob/hw-6.html">Homework 6</a> spells out exactly who is working on what to bring to class on Tuesday, with the intention of integrating the different parts into a working whole</li>
+</ul>
+
+<p>Code we wrote to read the ADXL335 accelerometer values is below. This code will print values on the computer in the format <code class="highlighter-rouge">356,389,274</code> per a single-line record, where the comma-separated values are the X, Y, and Z accelerometer values respectively.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// read a three-axis accelerometer</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">XPIN</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">YPIN</span> <span class="o">=</span> <span class="n">A1</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">ZPIN</span> <span class="o">=</span> <span class="n">A2</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">XPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">YPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">ZPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">XPIN</span><span class="p">)</span> <span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">","</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">YPIN</span><span class="p">)</span> <span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">","</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">ZPIN</span><span class="p">)</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-9-tuesday-march-3rd">Class 9: Tuesday, March 3rd</h3>
+
+<ul>
+  <li>Reviewing Homework 6 progress…unfortunately, this was harder than anticipated and nobody came in with a working model.</li>
+  <li>Putting the pieces together to drive different outputs (one output per team) with the photoresistor input.</li>
+  <li>Learned the <code class="highlighter-rouge">map()</code> function (discussed in Homework 5 but not yet elaborated on in class) very useful in facilitating a single input value driving different output devices with different ranges.</li>
+  <li>Teams assigned for final project development:
+    <ul>
+      <li>Akhil + Cain: LCD screen output</li>
+      <li>Austin + Fé: RGB LED output</li>
+      <li>Husayn + Stevin: servo motor gauge output</li>
+      <li>Kai + Phoenix: speaker output</li>
+    </ul>
+  </li>
+  <li>Each team had by the end of class gotten at least one input to drive their own output.</li>
+  <li>Decisions reached about the weather machine’s signal–output mapping:
+    <ul>
+      <li>PM<sub>2.5</sub>, thermometer, and photoresistor → LCD screen output</li>
+      <li>PM<sub>2.5</sub> → servo gauge output</li>
+      <li>thermometer → RGB LED output</li>
+      <li>photoresistor → speaker output</li>
+    </ul>
+  </li>
+</ul>
+
+<p>We wrote some code to read a photocell as an input and use its value to write to various different outputs.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// read the value of a photoresistor</span>
+<span class="c1">// and send its value to the computer</span>
+<span class="c1">// and also drive a ________________</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">PHOTOPIN</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">SERVOPIN</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">PHOTOPIN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">OUTPUTPIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">potVal</span><span class="p">;</span>
+  <span class="n">potVal</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">PHOTOPIN</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">potVal</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">outputVal</span><span class="p">;</span> <span class="c1">// create an output value</span>
+  <span class="c1">// use map() to change the range of the output value</span>
+  <span class="n">outputVal</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">potVal</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">);</span>
+  
+  
+  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="class-10-thursday-march-5th">Class 10: Thursday, March 5th</h3>
+
+<ul>
+  <li>Our final build day!</li>
+  <li>Status check-in to start: things were about where we last left them on Tuesday</li>
+  <li>Then, establish quick work plans for each student and team:
+    <ul>
+      <li>Austin + Fé: finish thermometer input and LED output. Problem: apparently both TMP36 sensors we had on hand were malfunctioning (perhaps they were wired with reverse polarity at some point—unclear). Solution: change to accelerometer as input rather than thermometer.</li>
+      <li>Akhil + Cain: finish LCD display code. Problem: displaying <code class="highlighter-rouge">º</code> degree symbol in <code class="highlighter-rouge">ºF</code> data label; solved with <code class="highlighter-rouge">lcd.write(223)</code> command. Hand-drew a map of all the character positions in a 16×2 matrix to clarify how to form <code class="highlighter-rouge">lcd.setCursor(x,y)</code> commands.</li>
+      <li>Stevin + Husayn: build out physical servo gauge. (Their code was already complete and functioning at the start of class.)</li>
+      <li>Phoenix: plan out and build the physical layout for the combined electronics.</li>
+      <li>Kai: complete the photocell-to-speaker subsystem and prepare it for integration into the main system.</li>
+    </ul>
+  </li>
+  <li>After our 5-minute break, students wrote out a shared main schematic for the complete system:</li>
+</ul>
+
+<p><img src="/images/mainSchematic.jpg" alt="Photo of electrical schematic hand-drawn on whiteboard." class="medium" /></p>
+
+<blockquote>
+  <blockquote>
+    <p>(Stevin drew the blue, Austin drew the orange, and Kai drew the purple. I drew the black.)</p>
+  </blockquote>
+</blockquote>
+
+<ul>
+  <li>Combining all hardware together onto the same breadboard and Arduino (each team contributed their piece)</li>
+  <li>Combining all software together into one sketch (Akhil and Stevin worked together on this)</li>
+  <li>Final show-off at about 3:00 p.m.…worked only very intermittently, unfortunately. But that’s pretty par for the course in assembling everything and then immediately testing. I suspect an electrical problem based on the intermittency we observed. This could be debugged by unplugging individual components and doing unit tests, which is what we would’ve done systematically if we had more time.</li>
+  <li>Having gotten as far as we could in the time given, we called it a day, did our group appreciations, and <em>sic transit gloria mundi</em>.</li>
+</ul>
+
+      </div>
+    </main>
+  </body>
+</html>
