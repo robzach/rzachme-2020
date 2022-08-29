@@ -15,6 +15,71 @@ permalink: /
     li{
         margin: 0.5em 0;
     }
+    
+    
+    html {
+        padding: 2em;
+        padding: 3vw;
+    }
+
+    body  {
+        font-size:2.5em;
+        font-size: 3vw;
+        font-family:geneva;
+        background-color:dimgrey;
+        color:aliceblue;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    /*this paints all the text in the #text div in a gradient.*/
+    /*
+    #text {
+        background: -webkit-linear-gradient(red, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    */
+
+    a {
+        animation:wipe infinite;
+        -moz-animation:wipe infinite;
+        -webkit-animation:wipe infinite;
+        color: lightblue;
+        text-decoration: underline;
+      text-decoration-style: wavy;
+        target="_blank";
+    }
+
+    a:hover {
+    /*    color: salmon;*/
+    /*    animation:wipe;*/
+        animation-play-state: running;
+        animation-duration: 1s;
+    }
+
+    @-moz-keyframes wipe /* Firefox */
+    {
+    0%   {color:red;}
+    50%  {color:orange;}
+    100%   {color:red;}
+    }
+
+    @-webkit-keyframes wipe /* Chrome */
+    {
+        0%   {background:red;}
+        15%  {background:orange;}
+        30% {background:yellow}  
+        45% {background: green}
+        60% {background: blue}
+        75% {background: indigo}
+        90% {background: violet}
+    }
+
+    a img { display:none; }
+    a:hover img { display:block; }
 </style>
 
 # Robert Zacharias
