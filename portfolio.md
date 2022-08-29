@@ -60,7 +60,7 @@ Experimenting with live-sourced video with overlays, this time using our own liv
 A promotional still for the performance.
 
 <video width="70%" autoplay="autoplay" loop="loop" controls>
-    <source src="/images/remote-possibilities/face_mesh_demo.mp4" type="video/mp4">
+    <source src="/rzachme-2020/images/remote-possibilities/face_mesh_demo.mp4" type="video/mp4">
 Sorry, your browser does not support the video tag.
 </video>
 Sample video of face tracking via webcam. I think this was my face, but truly don't know!
