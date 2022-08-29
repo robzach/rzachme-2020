@@ -38,6 +38,36 @@ permalink: /portfolio
 
 ## Here are some different projects I've worked on, listed in reverse chronological order:
 
+# Remote Possibilities (2021)
+
+How do you have an interactive dance performance during a pandemic? We explored some answers to this question with *[Remote Possibilities](https://remotepossibilities.splashthat.com/)*, an experimental fusion of dance, music, and engaging the audience members' webcams to do live face and body tracking.
+
+The piece was built in Javascript, starting with a healthy dose of [p5.js](https://p5js.org/) for lots of prototyping, and culminated in a series of live, remote performances during March of 2021. Performance duo [slowdanger](https://slowdangerslowdanger.com) turned their living room into a bizarro-world remotely-viewable playspace, [Kevin DeLand](http://delandbeforeti.me/) did the heavy technical lifting, and I helped conceive the piece and put together many experimental iterations of interactive web effects.
+
+Pittsburgh Post-Gazette story: ["Slowdanger Delivers Interactive Virtual Dance Experience in 'Remote Possibilities'"](https://www.post-gazette.com/ae/theater-dance/2021/03/18/Slowdanger-delivers-interactive-virtual-dance-experience-in-remote-possibilities/stories/202103180010)
+
+**Built of** webcams, open-source face trackers, Javascript, makeup, and colored lights.
+
+<div class="center" markdown="1">
+
+![Experimenting with remotely-sourced video with overlays (a pigeon in this case)](/images/remote-possibilities/pigeon.png)
+Experimenting with remotely-sourced video with overlays (a pigeon in this case)
+
+![Experimenting with live-sourced video with overlays](/images/remote-possibilities/playing.png)
+Experimenting with live-sourced video with overlays
+
+![A promotional still](/images/remote-possibilities/anna-cries.png)
+A promotional still
+
+<video width="70%" autoplay="autoplay" loop="loop" controls>
+    <source src="/images/remote-possibilities/face-mesh-demo.mov" type="video/mov">
+Sorry, your browser does not support the video tag.
+</video>
+Sample video of face tracking via webcam
+
+</div>
+
+
 # Resonant Bodies (2019)
 
 **A tactile speaker.** Designed to add an audience-accessible kinesthetic element to a live dance performance, so that people with different physical abilities can participate more fully as audience members.
