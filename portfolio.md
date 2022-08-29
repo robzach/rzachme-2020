@@ -51,19 +51,19 @@ Pittsburgh Post-Gazette story: ["Slowdanger Delivers Interactive Virtual Dance E
 <div class="center" markdown="1">
 
 ![Experimenting with remotely-sourced video with overlays (a pigeon in this case)](/images/remote-possibilities/pigeon.png)
-Experimenting with remotely-sourced video with overlays (a pigeon in this case)
+Experimenting with remotely-sourced video with overlays (a pigeon in this case). When the user moved their mouse, the transparent diamond followed it around, which allowed for some peekaboo interactivity.
 
 ![Experimenting with live-sourced video with overlays](/images/remote-possibilities/playing.png)
-Experimenting with live-sourced video with overlays
+Experimenting with live-sourced video with overlays, this time using our own live video as the source.
 
-![A promotional still](/images/remote-possibilities/anna-cries.png)
-A promotional still
+![A promotional still](/images/remote-possibilities/anna-cries.jpg)
+A promotional still for the performance.
 
 <video width="70%" autoplay="autoplay" loop="loop" controls>
-    <source src="/images/remote-possibilities/face-mesh-demo.mov" type="video/mov">
+    <source src="/images/remote-possibilities/face-mesh-demo.mp4" type="video/mp4">
 Sorry, your browser does not support the video tag.
 </video>
-Sample video of face tracking via webcam
+Sample video of face tracking via webcam. I think this was my face, but truly don't know!
 
 </div>
 
